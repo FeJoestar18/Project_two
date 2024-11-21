@@ -7,6 +7,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// routes/web.php
+Route::get('/loja', [LojaController::class, 'index'])->name('Loja');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
