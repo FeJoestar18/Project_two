@@ -15,13 +15,19 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }} 
                     </x-nav-link>
-                    <x-nav-link :href="route('Loja')" :active="request()->routeIs('Loja')">
-    {{ __('Loja') }}
-</x-nav-link>
+                    <x-nav-link :href="route('carrinho')" :active="request()->routeIs('carrinho')">
+                        {{ __('Carrinho') }} 
+                    </x-nav-link>
+                    <x-nav-link :href="route('assinaturas')" :active="request()->routeIs('assinaturas')">
+                        {{ __('Minhas Assinaturas') }} 
+                    </x-nav-link>
+                    <x-nav-link :href="route('loja')" :active="request()->routeIs('loja')">
+                        {{ __('Loja de Assinaturas') }} 
+                    </x-nav-link>
                 </div>
             </div>
 
-            <!-- Settings Dropdown -->
+            
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">

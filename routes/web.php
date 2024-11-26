@@ -13,7 +13,10 @@ Route::get('/', function () {
 }); 
 
 
-Route::get('/loja', [LojaController::class, 'index'])->name('Loja');
+Route::get('/loja', [LojaController::class, 'index'])->name('loja');
+Route::get('/carrinho', [LojaController::class, 'index'])->name('carrinho');
+Route::get('/assinaturas', [LojaController::class, 'index'])->name('assinaturas');
+
 
 
 
