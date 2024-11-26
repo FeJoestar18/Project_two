@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('livewire/indexo');
-});  // <-- Adicionei o ponto e vírgula aqui
+});  
 
 // routes/web.php
 Route::get('/loja', [LojaController::class, 'index'])->name('Loja');
