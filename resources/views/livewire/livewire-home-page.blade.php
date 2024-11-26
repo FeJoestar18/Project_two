@@ -1,46 +1,34 @@
+<link href="{{ asset('css/homepage.css') }}" rel="stylesheet">
 
-
-
-<div class="min-h-screen bg-gray-100">
-
-   
-
-    <header class="bg-[#FF2D20] p-4 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-white">Cadastra-se</h1>
-
-            @if (Route::has('login'))
-                <nav class="flex space-x-4">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" 
-                           class="text-white px-3 py-2 rounded-md hover:bg-white/20 transition">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" 
-                           class="text-white px-3 py-2 rounded-md hover:bg-white/20 transition">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" 
-                               class="text-white px-3 py-2 rounded-md hover:bg-white/20 transition">Register</a>
-                        @endif
-                    @endauth
-                </nav>
-            @endif
+<div class="LivewireHomePage">
+    <header class="Conteiner-Header">
+        <div class="Titulo-Header">
+            <h1 class="text-2xl font-bold text-white">Clubefy</h1>
         </div>
     </header>
 
-   
-    <main class="py-10">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-semibold text-gray-800">Bem-vindo à Minha Aplicação!</h2>
-            <p class="mt-4 text-lg text-gray-600">Aqui você pode gerenciar sua conta, explorar produtos, e muito mais.</p>
-        </div>
+    <main class="Conteiner-Cadastro">
+        <div class="Cadastro">
+            <h2 class="">Cadastre-se</h2>
+
+          
+                
+                <div class="Card">
+                    <h3 class="Login">Login</h3>
+                    <p class="Titulo-Login">Acesse sua conta para continuar.</p>
+                    <a href="{{ route('login') }}" class="Buttom-login">Login</a>
+                </div>
+
+                <br>
+
+                <div class="Card-2">
+                    <h3 class="Register">Registrar</h3>
+                    <p class="Titulo-Registro">Crie uma nova conta.</p>
+                    <a href="{{ route('register') }}" class="Buttom-Register">Registrar</a>
+                </div>
+            </div>
     </main>
-
- 
-    <footer class="bg-gray-900 text-white py-6">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Minha Aplicação. Todos os direitos reservados.</p>
-        </div>
+    <footer>
+            <p>&copy; 2024 Clubefy. Todos os direitos reservados.</p>
     </footer>
-
 </div>
