@@ -13,11 +13,19 @@ return new class extends Migration
     {
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('Description');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('plan_id');
+            $table->string('status');
+            $table->string('description');
             $table->float('price');
             $table->string('image');
             $table->timestamps();
+            $table->date('start_date');
+            $table->date('end_date')->nullable();
+
+            // Chaves estrangeiras
+        $table->foreign('user_id')->references('id')->on('users');
+        $table->foreign('plan_id')->references('id')->on('plans');
         });
     }
 

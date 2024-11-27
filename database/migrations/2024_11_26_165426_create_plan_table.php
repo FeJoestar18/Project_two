@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('plan', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
+            $table->string('description')->nullable();
+            $table->decimal('price');
             $table->float('time duration');
             $table->timestamps();
         });
